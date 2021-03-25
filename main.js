@@ -40,7 +40,6 @@ function setDataVG2(region) {
     d3.csv(filename).then(function(data) {
         // TODO: Clean and strip desired amount of data for barplot
         data = cleanDataVG2(data, region);
-        console.log(data);
 
         let color = d3.scaleOrdinal()
         // .domain(data)
@@ -57,7 +56,6 @@ function setDataVG2(region) {
                 .value(function(d) {return d.value;});
 
         let pied_data = pie(d3.entries(data));
-        console.log(pied_data);
         // TODO: Render the bar elements on the DOM
         /*
             This next section of code does the following:
@@ -368,7 +366,7 @@ function cleanDataVG2(data, region) {
         // TODO: Clean and strip desired amount of data for barplot
         // data = cleanDataVG1(data, year, all_time);
         data = cleanDataVG3(data);
-        
+    
         // TODO: Update the x axis domain with the max count of the provided data
         x.domain([0, d3.max(data, function(d) {return parseInt(d.GlobalSales) } )]);
 
@@ -435,7 +433,7 @@ function cleanDataVG2(data, region) {
             .attr("width", function(d) {return x(parseInt(d.GlobalSales))})
             .attr("height",  y.bandwidth());        // HINT: y.bandwidth() makes a reasonable display height
             
-        y_axis_text.text(`Games`);
+        y_axis_text.text(`Genre`);
         title.text(`Number of Global Sales for the Top Publisher in each Genre`);
 
         // Remove elements not in use if fewer groups in new dataset
@@ -480,7 +478,6 @@ function cleanDataVG2(data, region) {
         } 
 
         for (let genre in genres) {
-            console.log("hello")
             for (j = 0; j < publishers.length; j++) {
                 genres[genre][publishers[j]] = 0;
             }
