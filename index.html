@@ -15,14 +15,68 @@
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
         <div class="col-lg-6">
+            <h3>Top 10 Most Popular Video Games</h3>
+            <!-- <button type="button" class="btn btn-info" onclick="setDataVG1(2005, true)">All-Time</button>
+            <button type="button" class="btn btn-info" onclick="setDataVG1(2010, false)">2010</button>
+            <button type="button" class="btn btn-info" onclick="setDataVG1(2011, false)">2011</button> -->
             <div id="graph1"></div>
-            <div id="graph2"></div><br/>
+
+            <h3>Proportion of Sales for each Genre</h3>
+            <button type="button" class="btn btn-info" onclick="setDataVG2('Global_Sales')">Genres (Global)</button>
+            <button type="button" class="btn btn-info" onclick="setDataVG2('NA_Sales')">Genres (NA)</button>
+            <button type="button" class="btn btn-info" onclick="setDataVG2('EU_Sales')">Genres (EU)</button>
+            <button type="button" class="btn btn-info" onclick="setDataVG2('JP_Sales')">Genres (JP)</button>
+            <div id="graph2"></div>
+            <br/>
         </div>
         <div class="col-lg-6">
+            <h3>The Global Sales for Each Genre's Top Publisher</h3>
             <div id="graph3"></div>
         </div>
     </div>
+    <div>
+        <paragraph>
+            1. Question 1 is answered by showing the top 10 all-time video games based on global sales.
+        </paragraph><paragraph>
+            Question 2 is answered by looking at the pie chart and the legend. You can see the most popular genre by looking for the biggest slice and also just by looking at the legend. 
+        </paragraph><paragraph>
+            Question 3 is answered by hovering over the bar chart for the chosen genre. The top publisher (by global sales) will appear.
+        </paragraph><br></br>
+        <paragraph>
+            2. D3 is useful because it's relatively easy to add button functionality.
+        </paragraph><paragraph>
+            D3 is useful because it is allows you to add colors to the charts easily.
+        </paragraph><paragraph>
+            D3 is useful because it is very versatile and so there are a lot of options for charts.
+        </paragraph><br></br>
+        <paragraph>
+            3. There are a lot of moving parts in a D3 graph that can be hard to keep track off.
+        </paragraph><paragraph>
+            Creating D3 charts can take a long time to initially understand.
+        </paragraph><paragraph>
+            D3 charts do not have built-in mouseover functionality, instead you have to code it yourself.
+        </paragraph><br></br>
+        <paragraph>
+            4. I think that the majority of users would find my dashboard accessible but I think that people
+            who may have trouble seeing colors (deuteranopia, protanopia, tritanopia, achromatopsia) may have
+            issues with the pie chart and the second bar chart. I tried to use as contrasting colors as possible
+            and also to use the legend and the hover function to mitigate the effects of any user difficulty with
+            color pereception. To make the dashboard more accessible, I would have made the pie chart also have 
+            tooltip functionality so that the user can move their mouse over each section in order to see the 
+            relevant information. I could also have added a function where the relevant entry on the legend would 
+            stand out when you hover over the corresponding section and vice-versa.
+        </paragraph><br></br>
+        <paragraph>
+            5. With the pie-chart, I found that it was too difficult to properly implement tooltip functionality on top
+            of the legend. In addition, I found that it would be a big undertaking if I were to attempt to make hovering 
+            over a section highlight the corresponding legend entry and vice-versa. As I am new to D3, it was hard to add 
+            additional functionality that was not covered in the lab that could have helped with accessibility.
+        </paragraph>
+    </div>
     <!--Feel free to add more JavaScript files as needed-->
+    <!-- <script type="text/javascript" src="graph2.js"></script>
+    <script type="text/javascript" src="graph3.js"></script> -->
     <script type="text/javascript" src="main.js"></script>
+
 </body>
 </html>
